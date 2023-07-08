@@ -1,9 +1,10 @@
 part of '../sugary_flutter_animations.dart';
 
 class DigitalCardPreview extends StatelessWidget {
-  const DigitalCardPreview({super.key, required this.data, this.backgroundUrl});
+  const DigitalCardPreview({super.key, required this.data, this.backgroundUrl, this.envelopEntryDelay});
   final String? backgroundUrl;
   final DigitalCardData data;
+  final double? envelopEntryDelay;
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +37,7 @@ class DigitalCardPreview extends StatelessWidget {
                   ),
                 ),
               ).animate()
-              .moveX(begin: -(width*1.27), end: 0, curve: Curves.ease, delay: 700.ms, duration: 700.ms),
+              .moveX(begin: -(width*1.27), end: 0, curve: Curves.ease, delay: 700.ms, duration: (envelopEntryDelay??700).ms),
             ),
             Center(
               child: DigitalCardView(
