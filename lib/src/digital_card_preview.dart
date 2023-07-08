@@ -22,18 +22,21 @@ class DigitalCardPreview extends StatelessWidget {
             Positioned.fill(
               child: AnimationBackground(backgroundUrl: backgroundUrl),
             ),
-            if(data.envelopColor!=null)Center(
-              child: Transform.rotate(
-                angle: pi/14,
-                child: Transform.translate(
-                  offset: Offset(cardWidth*0.27, 0),
-                  child: SizedBox(
-                    height: envelopHeight,
-                    width: envelopWidth,
-                    child: AssembledEnvelope(data: data),
+            if(data.envelopColor!=null) Animate(
+              child: Center(
+                child: Transform.rotate(
+                  angle: pi/14,
+                  child: Transform.translate(
+                    offset: Offset(cardWidth*0.27, 0),
+                    child: SizedBox(
+                      height: envelopHeight,
+                      width: envelopWidth,
+                      child: AssembledEnvelope(data: data),
+                    ),
                   ),
                 ),
-              ),
+              ).animate()
+              .moveX(begin: -(width*1.27), end: 0, curve: Curves.ease, delay: 700.ms, duration: 700.ms),
             ),
             Center(
               child: DigitalCardView(

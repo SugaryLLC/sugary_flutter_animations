@@ -30,9 +30,19 @@ class DigitalCardView extends StatelessWidget {
             ),
             child: ClipRRect(
               borderRadius: borderRadius,
-              child: CachedNetworkImage(
-                imageUrl: data.cardUrl,
-                fit: BoxFit.cover,
+              child: Stack(
+                children: [
+                  Positioned.fill(child: Container(
+                    margin: const EdgeInsets.all(1),
+                    color: Colors.white,
+                  )),
+                  Positioned.fill(
+                    child: CachedNetworkImage(
+                      imageUrl: data.cardUrl,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
