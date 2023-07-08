@@ -1,0 +1,36 @@
+name: sugary_flutter_animations
+description: Gifting Related Animations to be used in Sugary Flutter projects
+version: 0.0.1
+#homepage: https://
+
+environment:
+  sdk: ">=2.17.0 <=3.10.1"
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cached_network_image: '>=3.2.3'
+  flutter_svg: '>=2.0.7'
+  simple_shadow: ^0.3.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+   assets:
+     - assets/
+
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
