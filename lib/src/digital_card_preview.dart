@@ -22,7 +22,7 @@ class DigitalCardPreview extends StatelessWidget {
             Positioned.fill(
               child: AnimationBackground(backgroundUrl: backgroundUrl),
             ),
-            Center(
+            if(data.envelopColor!=null)Center(
               child: Transform.rotate(
                 angle: pi/14,
                 child: Transform.translate(
