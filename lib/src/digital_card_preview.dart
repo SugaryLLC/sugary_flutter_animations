@@ -37,7 +37,7 @@ class DigitalCardPreview extends StatelessWidget {
                   ),
                 ),
               ).animate()
-              .moveX(begin: -(width*1.27), end: 0, curve: Curves.ease, delay: 700.ms, duration: (envelopEntryDelay??700).ms),
+              .moveX(begin: -(width*1.27), end: 0, curve: Curves.ease, delay: (envelopEntryDelay??700).ms, duration: 700.ms),
             ),
             Center(
               child: DigitalCardView(
